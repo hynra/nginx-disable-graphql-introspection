@@ -13,7 +13,7 @@ function disableSchema(r) {
               }
             ]
          }
-		)
+        )
       )
     }
     else r.internalRedirect('@app-backend')

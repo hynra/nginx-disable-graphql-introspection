@@ -21,6 +21,11 @@ Disable GraphQL Introspection in Nginx using JS Module
  }
  ```
  
+ * in http scope, import the js file
+ ```
+ js_import /etc/nginx/njs/introspect.js;
+ ```
+ 
  * Add upstream to your Graphql backend
  
  ```

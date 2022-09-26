@@ -4,10 +4,16 @@ function disableSchema(r) {
     if(requestBody.includes("__schema") || requestBody.includes("__type")){
       r.headersOut['Content-Type'] = 'application/json';
       r.return(
-        400,
-        JSON.stringify({
-           "message": "GraphQL introspection is not allowed."
-        })
+        200,
+        JSON.stringify(
+			{ "errors": 
+				[
+					{
+						"message": "GraphQL introspection is not allowed."
+					}
+				]
+			}
+		)
       )
     }
     else r.internalRedirect('@app-backend')

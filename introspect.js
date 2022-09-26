@@ -6,13 +6,13 @@ function disableSchema(r) {
       r.return(
         200,
         JSON.stringify(
-			{ "errors": 
-				[
-					{
-						"message": "GraphQL introspection is not allowed."
-					}
-				]
-			}
+         { 
+           "errors": [
+              {
+                 "message": "GraphQL introspection is not allowed."
+              }
+            ]
+         }
 		)
       )
     }
